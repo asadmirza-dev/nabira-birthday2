@@ -6,6 +6,8 @@ import Celebration from "./components/Celebration.jsx";
 import Note from "./components/Note.jsx";
 import Duas from "./components/Duas.jsx";
 import Finale from "./components/Finale.jsx";
+import Music from "./components/Music.jsx";
+import CakeScene from "./components/CakeScene";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -38,6 +40,7 @@ export default function App() {
 
   return (
     <>
+    <Music/>
       {intro && <Opening onDone={finishIntro} />}
 
       {!intro && (
@@ -52,6 +55,7 @@ export default function App() {
               <Note />
               <Duas />
               <Finale />
+              <CakeScene />
             </>
           )}
         </main>

@@ -27,7 +27,8 @@ export default function Finale() {
       <button className="btn" onClick={surprise} disabled={done} data-reveal>
         {done ? "Happy Birthday, Nabira" : "Your Birthday Surprise"}
       </button>
-      <p className="fi-final" style={{ opacity: 0 }}>May Allah always guide your steps. Ameen </p>
+      <p className="fi-final" style={{ opacity: 0 }}>May Allah always guide your steps. Ameen 💖</p>
+     {/* <p className="signature">By Asad.</p> */}
     </section>
   );
 }

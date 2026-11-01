@@ -226,7 +226,27 @@ body.locked {
   color: var(--dusty);
   font-size: 1.2rem;
 }
+/* music button */
+.music-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  padding: 10px 18px;
+  border: 1px solid #d99baa;
+  border-radius: 30px;
+  background: #fff9f5;
+  color: #a66d7c;
+  font-family: "Jost", sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
+.music-btn:hover {
+  background: #f8e5e8;
+  transform: translateY(-2px);
+}
 /* duas */
 .duas {
   padding: 6rem 1.5rem 4rem;
@@ -316,6 +336,100 @@ body.locked {
   color: var(--dusty);
   margin-top: 2.4rem;
   max-width: 22ch;
+}
+
+.signature {
+  font-family: "Dancing Script", cursive;
+  font-size: clamp(1.2rem, 3.2vw, 2.2rem);
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #b76e79;
+  margin-top: 1.2rem;
+}
+
+/* cake section */
+.cake-section {
+  min-height: 700px;
+  padding: 70px 20px;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    #fff7f6,
+    #fce5e9
+  );
+  overflow: hidden;
+}
+
+.cake-section h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(1.2rem, 9vw, 3.5rem);
+  line-height: 1.1;
+  padding: 0 1rem;
+}
+
+.cake-section p {
+  font-family: "Jost", sans-serif;
+  color: #916b75;
+  font-size: 16px;
+  padding-top: 0.7rem;
+}
+
+.cake-canvas {
+  width: 100%;
+  max-width: 650px;
+  height: 460px;
+  margin: 4rem auto;
+}
+
+.cut-cake-btn {
+  border: none;
+  padding: 14px 32px;
+  border-radius: 30px;
+  background: #d9829b;
+  color: white;
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cut-cake-btn:hover:not(:disabled) {
+  background: #bd637e;
+  transform: translateY(-3px);
+}
+
+.cut-cake-btn:disabled {
+  opacity: 0.8;
+  cursor: default;
+}
+
+.confetti-container {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.confetti-particle {
+  position: absolute;
+  top: -20px;
+  border-radius: 2px;
+  opacity: 0;
+  animation: confettiFall 3s ease-out forwards;
+}
+
+@keyframes confettiFall {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(0.5);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(110vh) rotate(900deg) scale(1);
+    opacity: 0;
+  }
 }
 
 @media (max-width: 640px) {
